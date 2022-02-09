@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+
+    <title>My Crush</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="card mg-10" id="card1">
+            <div class="card__title">
+                <div class="col_third" id="heart">
+                    <i class="fa fa-heart fa-8x"></i>
+                </div>
+                <div class="card__title--name">
+                    <h1> Anh có đẹp trai honggg </h1>
+                </div>
+            </div>
+            <div class="button__list mt-10">
+                <div class="row">
+                    <div class="col col-lg-6 mt-10">
+                        <div class="button button__subscribe btnNo" onclick="showMess()">
+                            <span> Cóa ạ </span>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6 mt-10">
+                        <div class="button button__message btnNo" onclick="showMess()">
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mg-10" id="card2" style="display: none;">
+            <div class="card mg-10">
+                <div style="height: 30px;"></div>
+                <div class="card__title--name">
+                    <div d-flex m-auto>
+                        <h1 style="color: red;">ngại thíaaa</h1> <br>
+                        <div><video width="200" height="100%" id="video">
+                                <source src="./vd.mp4" type="video/mp4">
+                            </video></div>
+                    </div>
+                </div>
+                <div style="height: 30px;"></div>
+                <div class="button button__subscribe btnBack" onclick="hideMess()">
+                    <span> Chọn lại </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showMess() {
+            document.getElementById("card1").style.display = 'none';
+            document.getElementById("card2").style.display = "block";
+            var video = document.getElementById('video');
+            video.play();
+        }
+
+        function hideMess() {
+            document.getElementById("card1").style.display = 'block';
+            document.getElementById("card2").style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
+</body>
+
+</html>
